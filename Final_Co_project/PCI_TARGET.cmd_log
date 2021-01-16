@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "F:/study/3rd computer/CO2/Xilinx/Final_Co_project/PCI_TARGET.xst" -ofn "F:/study/3rd computer/CO2/Xilinx/Final_Co_project/PCI_TARGET.syr" 

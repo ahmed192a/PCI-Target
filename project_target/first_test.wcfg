@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="F:/study/3rd computer/CO2/Xilinx/project_target/Test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="Test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/Test/NFRAME" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">NFRAME</obj_property>
+      <obj_property name="ObjectShortName">NFRAME</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/Address_Data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Address_Data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Address_Data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/C_BE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">C_BE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">C_BE[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/NIRED" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">NIRED</obj_property>
+      <obj_property name="ObjectShortName">NIRED</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/NTRED" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">NTRED</obj_property>
+      <obj_property name="ObjectShortName">NTRED</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/NDEVSEL" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">NDEVSEL</obj_property>
+      <obj_property name="ObjectShortName">NDEVSEL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/M_Data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">M_Data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M_Data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test/uut/clock/Clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Clock</obj_property>
+      <obj_property name="ObjectShortName">Clock</obj_property>
+   </wvobject>
+</wave_config>

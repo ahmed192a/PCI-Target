@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="F:/study/3rd computer/CO2/Xilinx/project_target/Special_cycle_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="Special_cycle" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/Special_cycle/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Special_cycle/stop" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">stop</obj_property>
+      <obj_property name="ObjectShortName">stop</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Special_cycle/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Special_cycle/Address_Data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Address_Data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Address_Data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Special_cycle/C_BE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">C_BE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">C_BE[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Special_cycle/NFRAME" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">NFRAME</obj_property>
+      <obj_property name="ObjectShortName">NFRAME</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Special_cycle/NIRED" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">NIRED</obj_property>
+      <obj_property name="ObjectShortName">NIRED</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Special_cycle/NTRED" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">NTRED</obj_property>
+      <obj_property name="ObjectShortName">NTRED</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Special_cycle/NDEVSEL" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">NDEVSEL</obj_property>
+      <obj_property name="ObjectShortName">NDEVSEL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Special_cycle/Write_NRead" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Write_NRead</obj_property>
+      <obj_property name="ObjectShortName">Write_NRead</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Special_cycle/M_Data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">M_Data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M_Data[31:0]</obj_property>
+   </wvobject>
+</wave_config>

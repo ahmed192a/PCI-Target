@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "F:/study/3rd computer/CO2/Xilinx/project_target/Special_cycle_isim_beh.exe" -prj "F:/study/3rd computer/CO2/Xilinx/project_target/Special_cycle_beh.prj" "work.Special_cycle" "work.glbl" 

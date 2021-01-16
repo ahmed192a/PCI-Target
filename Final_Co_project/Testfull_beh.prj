@@ -1,0 +1,4 @@
+verilog work "Target.v"
+verilog work "clock.v"
+verilog work "Test.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

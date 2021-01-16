@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="F:/study/3rd computer/CO2/Xilinx/project_target/Test0_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="Test0" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="11" />
+   <wave_markers>
+      <marker time="480000000" label="" />
+      <marker time="520000000" label="" />
+      <marker time="560000000" label="" />
+      <marker time="640000000" label="" />
+      <marker time="680000000" label="" />
+      <marker time="720000000" label="" />
+      <marker time="760000000" label="" />
+      <marker time="600000000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/Test0/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test0/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test0/Address_Data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Address_Data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Address_Data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test0/C_BE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">C_BE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">C_BE[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test0/NFRAME" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">NFRAME</obj_property>
+      <obj_property name="ObjectShortName">NFRAME</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test0/NIRED" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">NIRED</obj_property>
+      <obj_property name="ObjectShortName">NIRED</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test0/NTRED" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">NTRED</obj_property>
+      <obj_property name="ObjectShortName">NTRED</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test0/NDEVSEL" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">NDEVSEL</obj_property>
+      <obj_property name="ObjectShortName">NDEVSEL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test0/stop" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">stop</obj_property>
+      <obj_property name="ObjectShortName">stop</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test0/Write_NRead" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Write_NRead</obj_property>
+      <obj_property name="ObjectShortName">Write_NRead</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test0/M_Data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">M_Data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M_Data[31:0]</obj_property>
+   </wvobject>
+</wave_config>

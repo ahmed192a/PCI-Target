@@ -1,0 +1,101 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    16:40:21 12/19/2020 
+// Design Name: 
+// Module Name:    P2 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module CLK (clock);
+    output reg clock = 0;
+    
+    always begin 
+        #5 clock = ~clock;
+    end
+
+endmodule
+
+module PCITarget (CLK, FRAMEn, AD, CBE, IRDYn, TRDYn, DEVSELn);
+    input CLK, FRAMEn, IRDYn;
+    input [3:0] CBE;
+    inout [31:0] AD;
+    output reg TRDYn=1, DEVSELn=1;
+
+    parameter IO_address = 800;
+    parameter READ = 4'b0010;
+    parameter WRITE = 4'b0011;
+
+    reg [31:0] Mem [0:31];
+    reg [4:0] read_pointer = 0, write_pointer = 0;
+
+    wire transacton_valid = ~TRDYn & ~IRDYn;
+    reg [31:0] transaction = 32'bz;
+	 reg [3:0] operation = 4'bz;
+    assign AD = (~TRDYn & operation == READ)? transaction : 32'bz;
+   
+
+    always @(posedge CLK)
+    begin
+        if (AD == IO_address) begin
+            operation <= CBE;
+            @(posedge CLK)
+            @(negedge CLK)
+            DEVSELn <= 0;
+            TRDYn <= 0;
+        end
+
+        case(operation)
+            READ: begin
+                if (transacton_valid) 
+                    read_pointer <= read_pointer + 1;
+            end
+			
+            WRITE: begin
+                if (transacton_valid) begin
+                    Mem[write_pointer] <= AD;
+                    write_pointer <= write_pointer + 1;
+                end
+			end
+        endcase
+
+        if (FRAMEn) begin
+            @(negedge CLK)
+            TRDYn <= 1;
+            DEVSELn <= 1;
+            read_pointer <= 0;
+        end
+    end        
+
+    always @(transacton_valid)
+    begin
+        if (transacton_valid) begin
+            case (operation)
+                READ: transaction <= Mem[read_pointer];
+            endcase
+        end
+    end
+
+    always @(read_pointer)
+    begin
+        if (transacton_valid) begin
+            case (operation)
+                READ: @(negedge CLK) transaction <= Mem[read_pointer];
+            endcase
+        end
+    end
+
+endmodule
