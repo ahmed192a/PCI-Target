@@ -19,15 +19,15 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module PCI_TARGET(
-	 input reset,
-	 input clk,
-	 output reg stop,
-    inout [31:0] Address_Data,
-    input NFRAME,
-    input NIRED,
-    input [3:0] C_BE,
-    output reg NTRED,
-    output reg NDEVSEL
+	output reg NTRED,												// NTRed flag
+    output reg NDEVSEL												// Device Select
+	output reg stop,												// Stop
+    inout [31:0] Address_Data,										// Address and Data
+	input reset,													// Reset
+	input clk, 														// Clock
+    input NFRAME,													// Frame Number
+    input NIRED,													// NIRed flag
+    input [3:0] C_BE,												// Control Byte Enable
     );
 	integer i;
 /************************************************
@@ -114,19 +114,16 @@ module PCI_TARGET(
 
 
 
-	localparam [63:0]target_addresses_0 			= 64'd4294967284;
+	localparam [63:0]target_addresses_0 		= 64'd4294967284;
 	localparam [63:0]target_addresses_last 		= 64'd4294967299;
 
 	localparam [31:0]target_IO_addresses_0 		= 0;
 	localparam [31:0]target_IO_addresses_last 	= 15;
 
-	localparam [31:0]bar_addresses_0 				= 16;
-	localparam [31:0]bar_addresses_last 			= 21;
+	localparam [31:0]bar_addresses_0 			= 16;
+	localparam [31:0]bar_addresses_last 		= 21;
 
 
-//2pow(32) - 1 = 4294967295
-//(2pow(32) - 1) - 11 = 4294967284 (start)
-//(2pow(32) - 1) + 4 = 4294967299 (end)
 	
 /************************************************
 				Wire decleration & assigning
@@ -168,9 +165,9 @@ module PCI_TARGET(
 	//wire read_trigger = (NTRED); 
 	
 	
-	wire add_phase = ~NFRAME && NDEVSEL && NIRED;
-	//
-	wire [31:0]index = recieved_address - target_addresses_0;
+	wire add_phase = ~NFRAME && NDEVSEL && NIRED;				// set to 1 in case the address phase
+
+	wire [31:0]index = recieved_address - target_addresses_0;	// index of the memory
 
 always @(posedge clk or negedge clk or negedge reset or posedge master_target_ready )//or posedge end_trans)
 begin

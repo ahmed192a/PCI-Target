@@ -6,7 +6,7 @@
 //
 // Create Date:   14:49:31 12/19/2020
 // Design Name:   PCI_TARGET
-// Module Name:   F:/study/3rd computer/CO2/Xilinx/project_target/Test.v
+// Module Name:   Test.v
 // Project Name:  project_target
 // Target Device:  
 // Tool versions:  
@@ -55,17 +55,8 @@ module Testfull;
 		.NTRED(NTRED), 
 		.NDEVSEL(NDEVSEL)
 	);
-//		TARGET uut11 (
-//		.reset(reset),
-//		.clk(clk),
-//		.stop(stop),
-//		.Address_Data(Address_Data), 
-//		.NFRAME(NFRAME), 
-//		.NIRED(NIRED), 
-//		.C_BE(C_BE), 
-//		.NTRED(NTRED), 
-//		.NDEVSEL(NDEVSEL)
-//	);
+
+
 	// Clock instance
 	clock clock (clk);
 	assign Address_Data = Write_NRead? M_Data :32'bz;
